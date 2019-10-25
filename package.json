@@ -1,0 +1,17 @@
+{
+  "name": "helloworldfpay",
+  "version": "1.0.0",
+  "description": "This is Hello World Fpay example using cordova plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hello",
+    "World",
+    "Ionic",
+    "Fpay"
+  ],
+  "author": "Elmahdi Hanafi",
+  "license": "ISC"
+}
