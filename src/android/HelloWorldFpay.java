@@ -1,4 +1,4 @@
-package cordova-plugin-helloworldfpay;
+package cordova.plugin.helloworldfpay;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -14,10 +14,10 @@ public class HelloWorldFpay extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if(action.equals('add')) {
+        if(action.equals("add")) {
             this.add(args, callbackContext);
             return true;
-        } else if(action.equals('substract')) {
+        } else if(action.equals("substract")) {
             this.substract(args, callbackContext);
             return true;
         }
@@ -27,8 +27,8 @@ public class HelloWorldFpay extends CordovaPlugin {
     private void add(JSONArray args, CallbackContext callback) {
         if(args != null) {
             try {
-                int p1 = Integer.parseInt(args.getJSONObject(0).getString('param1'));
-                int p2 = Integer.parseInt(args.getJSONObject(0).getString('param2'));
+                int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
+                int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
                 callback.success("" + (p1+p3));
             } catch(Exception ex) {
                 callback.error("Someting went wrong " + ex);
@@ -41,8 +41,8 @@ public class HelloWorldFpay extends CordovaPlugin {
     private void substract(JSONArray args, CallbackContext callback) {
         if(args != null) {
             try {
-                int p1 = Integer.parseInt(args.getJSONObject(0).getString('param1'));
-                int p2 = Integer.parseInt(args.getJSONObject(0).getString('param2'));
+                int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
+                int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
                 callback.success("" + (p1-p3));
             } catch(Exception ex) {
                 callback.error("Someting went wrong " + ex);
