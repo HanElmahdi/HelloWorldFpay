@@ -24,6 +24,7 @@ public class HelloWorldFpay extends CordovaPlugin {
     private void add(JSONArray args, CallbackContext callback) {
         if(args != null) {
             try {
+                Test t1 = new Test();
                 int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
                 int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
                 callback.success("" + (p1+p2));
