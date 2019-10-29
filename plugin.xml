@@ -15,7 +15,7 @@
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/HelloWorldFpay.java" target-dir="src/cordova/plugin/helloworldfpay/HelloWorldFpay" />
-      <source-file src="src/android/libs/LibrayTest.java" target-dir="src/cordova/plugin/helloworldfpay/libs/LibrayTest" />
+      <source-file src="src/android/libs/LibrayTest.jar" target-dir="src/cordova/plugin/helloworldfpay/libs/LibrayTest" />
    </platform>
    
 </plugin>
