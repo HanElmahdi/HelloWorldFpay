@@ -6,6 +6,7 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import package_1.NewClass;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -43,7 +44,10 @@ public class HelloWorldFpay extends CordovaPlugin {
             try {
                 int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
                 int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                callback.success("" + (p1-p2));
+                //callback.success("" + (p1-p2));
+                NewClass n = new NewClass();
+                callback.success( n.test() );
+                
             } catch(Exception ex) {
                 callback.error("Someting went wrong " + ex);
             }
@@ -51,4 +55,29 @@ public class HelloWorldFpay extends CordovaPlugin {
             callback.error("Please do not pass null value");
         }
     }
+
+    /*private void generateJSON(JSONArray client, CallbackContext callback) {
+        if(client != null) {
+            try {
+                int id = Integer.parseInt(client.getJSONObject(0).getString("id"));
+                String firstName = client.getJSONObject(0).getString("firstName");
+                String lastName = client.getJSONObject(0).getString("lastName");
+                String phone = client.getJSONObject(0).getString("phone");
+                String email = client.getJSONObject(0).getString("mail");
+
+                JsonObject json_client = new JsonObject();
+                json_client.addProperty("id", id);
+                json_client.addProperty("firstName", firstName);
+                json_client.addProperty("lastName", lastName);
+                json_client.addProperty("phone", phone);
+                json_client.addProperty("email", email);
+
+                callback.success(json_client.toString());
+            } catch(Exception ex) {
+                callback.error("Someting went wrong " + ex);
+            }
+        } else {
+            callback.error("Client Object NULL");
+        }
+    }*/
 }

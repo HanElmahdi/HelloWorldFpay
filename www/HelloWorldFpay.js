@@ -7,3 +7,7 @@ module.exports.add = function(arg0, success, error) {
 module.exports.substract = function(arg0, success, error) {
     exec(success, error, 'HelloWorldFpay', 'substract', [arg0]);
 };
+
+module.exports.generateJSON = function(arg0, success, error) {
+    exec(success, error, 'HelloWorldFpay', 'generateJSON', [arg0]);
+};
