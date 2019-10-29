@@ -17,6 +17,9 @@ public class HelloWorldFpay extends CordovaPlugin {
         } else if(action.equals("substract")) {
             this.substract(args, callbackContext);
             return true;
+        } else if(action.equals("test")) {
+            this.test(callbackContext);
+            return true;
         }
         return false;
     }
