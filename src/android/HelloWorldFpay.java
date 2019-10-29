@@ -7,6 +7,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import package_1.NewClass;
+
 public class HelloWorldFpay extends CordovaPlugin {
 
     @Override
