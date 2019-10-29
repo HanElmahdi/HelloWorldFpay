@@ -1,5 +1,9 @@
 var exec = require('cordova/exec');
 
+module.exports.test = function(success, error) {
+    exec(success, error, 'HelloWorldFpay', 'test');
+};
+
 module.exports.add = function(arg0, success, error) {
     exec(success, error, 'HelloWorldFpay', 'add', [arg0]);
 };
