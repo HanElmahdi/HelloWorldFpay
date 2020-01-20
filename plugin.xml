@@ -16,6 +16,12 @@
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/HelloWorldFpay.java" target-dir="src/cordova/plugin/helloworldfpay/HelloWorldFpay" />
       <source-file src="src/android/Test.java" target-dir="src/cordova/plugin/helloworldfpay/Test" />
+      <source-file src="src/android/BaseApp.java" target-dir="src/cordova/plugin/helloworldfpay/BaseApp" />
+      
+      
+      <framework src="src/android/yourFile.gradle" custom="true" type="gradleReference" />
+
+       <resource-file src="src/android/foo.aar" target="src/cordova/plugin/helloworldfpay/foo.aar" />
    </platform>
    
 </plugin>
