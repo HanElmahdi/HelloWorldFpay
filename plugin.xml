@@ -19,9 +19,11 @@
       <source-file src="src/android/BaseApp.java" target-dir="src/cordova/plugin/helloworldfpay/BaseApp" />
       
       
-      <framework src="src/android/yourFile.gradle" custom="true" type="gradleReference" />
+      <!--<framework src="src/android/yourFile.gradle" custom="true" type="gradleReference" />
 
-       <resource-file src="src/android/foo.aar" target="src/cordova/plugin/helloworldfpay/foo.aar" />
+       <resource-file src="src/android/foo.aar" target="src/cordova/plugin/helloworldfpay/foo.aar" />-->
+
+       <lib-file src="src/android/foo.aar" />
    </platform>
    
 </plugin>
