@@ -18,18 +18,19 @@
       <source-file src="src/android/Test.java" target-dir="src/cordova/plugin/helloworldfpay/Test" />
       <source-file src="src/android/BaseApp.java" target-dir="src/cordova/plugin/helloworldfpay/BaseApp" />
 
-      <framework src="src/android/fpay.gradle" custom="true" type="gradleReference"/>
-      <resource-file src="src/android/fpay-release-2.1.5.aar" target="libs/fpay.aar"/>
-
-      <!--
-         <framework src="src/android/yourFile.gradle" custom="true" type="gradleReference" />
-         <resource-file src="src/android/foo.aar" target="src/cordova/plugin/helloworldfpay/foo.aar" />
-         <lib-file src="src/android/foo.aar" />
-      -->
-   </platform>
-   <!--<platform name="android">
       <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
       <lib-file src="src/android/barcodescanner-release-2.1.5.aar"/>
-  </platform>-->
+
+      <!--
+
+         <framework src="src/android/fpay.gradle" custom="true" type="gradleReference"/>
+         <resource-file src="src/android/fpay-release-2.1.5.aar" target="libs/fpay.aar"/>
+
+         <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
+         <lib-file src="src/android/barcodescanner-release-2.1.5.aar"/>
+
+      -->
+
+   </platform>
    
 </plugin>
