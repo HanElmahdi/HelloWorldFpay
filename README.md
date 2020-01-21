@@ -39,9 +39,11 @@ git push -u origin master
 
 ```
 ionic start HelloWorldFpayApp blank
+ionic cordova platform remove android
 ionic cordova platform add android
 ionic cordova platform list
 ionic cordova plugin add https://github.com/HanElmahdi/HelloWorldFpay.git --save
 ionic generate provider HelloWorld
-ionic  cordova plugin list
+ionic cordova plugin list
+ionic cordova plugin remove cordova-plugin-helloworldfpay
 ```
