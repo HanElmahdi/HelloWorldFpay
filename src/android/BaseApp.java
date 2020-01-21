@@ -1,16 +1,16 @@
-public class BaseApp extends Application {
+public class BaseApp /*extends Application*/ {
 
-    @Override
+    //@Override
     public void onCreate() {
-        super.onCreate();
-        AidlUtil.getInstance().connectPrinterService(this);
+        //super.onCreate();
+        //AidlUtil.getInstance().connectPrinterService(this);
     }
 
     public void printText(String content, boolean  isBluTooth){
-        if (isBluTooth) {
-            Printerhelper.getInstance().printByBluTooth(content);
-        } else {
-            Printerhelper.getInstance().printText(content);
-        }
+        //if (isBluTooth) {
+           // Printerhelper.getInstance().printByBluTooth(content);
+        //} else {
+            //Printerhelper.getInstance().printText(content);
+        //}
     }
 }
