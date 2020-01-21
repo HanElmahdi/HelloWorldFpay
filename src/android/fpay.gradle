@@ -5,7 +5,7 @@
    }
    }
   dependencies {
-   compile(name:'testaar2-debug', ext:'aar')
+   compile(name:'fpay', ext:'aar')
    }
  android {
     packagingOptions {
