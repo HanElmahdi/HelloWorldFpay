@@ -6,18 +6,18 @@ repositories{
 }
 
 dependencies {
-    compile(name:'barcodescanner-release-2.1.5', ext:'aar')
+    compile(name:'SunmiLibrary-release-1.0', ext:'aar')
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-v4:27.1.0'
+    }
 }
 
 android {
     packagingOptions {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
-    }
-}
-
-configurations.all {
-    resolutionStrategy {
-        force 'com.android.support:support-v4:27.1.0'
     }
 }

@@ -18,8 +18,8 @@
       <source-file src="src/android/Test.java" target-dir="src/cordova/plugin/helloworldfpay/Test" />
       <source-file src="src/android/BaseApp.java" target-dir="src/cordova/plugin/helloworldfpay/BaseApp" />
 
-      <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
-      <lib-file src="src/android/barcodescanner-release-2.1.5.aar"/>
+      <framework src="src/android/SunmiLibrary.gradle" custom="true" type="gradleReference"/>
+      <lib-file src="src/android/SunmiLibrary-release-1.0.aar"/>
 
       <!--
 
