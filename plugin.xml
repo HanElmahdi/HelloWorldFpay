@@ -24,7 +24,7 @@
       <!--
 
          <framework src="src/android/fpay.gradle" custom="true" type="gradleReference"/>
-         <resource-file src="src/android/fpay-release-2.1.5.aar" target="libs/fpay.aar"/>
+         <resource-file src="src/android/fpay-release-2.1.5.aar"  target="libs/fpay.aar"/>
 
          <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
          <lib-file src="src/android/barcodescanner-release-2.1.5.aar"/>
