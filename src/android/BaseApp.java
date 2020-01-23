@@ -1,12 +1,13 @@
 package cordova.plugin.helloworldfpay;
 import android.app.Application;
+import ma.fpay.sunmilibrary.printerhelper.utils.AidlUtil;
 
 public class BaseApp extends Application {
 
-    //@Override
+    @Override
     public void onCreate() {
-        //super.onCreate();
-        //AidlUtil.getInstance().connectPrinterService(this);
+        super.onCreate();
+        AidlUtil.getInstance().connectPrinterService(this);
     }
 
     public void printText(String content, boolean  isBluTooth){
