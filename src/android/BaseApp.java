@@ -1,4 +1,7 @@
-public class BaseApp /*extends Application*/ {
+package cordova.plugin.helloworldfpay;
+import android.app.Application;
+
+public class BaseApp extends Application {
 
     //@Override
     public void onCreate() {
