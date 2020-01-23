@@ -1,5 +1,5 @@
 package cordova.plugin.helloworldfpay;
-import adroid.app.Application;
+import android.app.Application;
 
 public class BaseApp extends Application {
 
