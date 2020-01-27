@@ -8,8 +8,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Application;
+import ma.fpay.sunmilibrary.ionic.BaseApp;
 import ma.fpay.sunmilibrary.printerhelper.utils.AidlUtil;
-
 public class PrintFpay extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
