@@ -12,7 +12,7 @@ import ma.fpay.sunmilibrary.ionic.BaseApp;
 //import ma.fpay.sunmilibrary.printerhelper.utils.AidlUtil;
 
 public class PrintFpay extends CordovaPlugin {
-    /*Override
+    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if(action.equals("printText")) {
             this.printText(args, callbackContext);
@@ -21,7 +21,7 @@ public class PrintFpay extends CordovaPlugin {
         return false;
     }
 
-	public void printText(JSONArray args, CallbackContext callback) {
+	/*public void printText(JSONArray args, CallbackContext callback) {
         //BaseApp baseApp = (BaseApp) getApplication();
         //BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
 		String text = args.getJSONObject(0).getString("text");
