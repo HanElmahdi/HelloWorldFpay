@@ -16,7 +16,7 @@ public class BaseApp extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if(action.equals("printText")) {
-            this.printText(callbackContext);
+            this.printText(args, callbackContext);
             return true;
         }
         return false;
@@ -24,7 +24,7 @@ public class BaseApp extends CordovaPlugin {
 
 	public void printText(JSONArray args, CallbackContext callback) {
         BaseApp baseApp = (BaseApp) getApplication();
-		String text = Integer.parseInt(args.getJSONObject(0).getString("text"));
+		String text = args.getJSONObject(0).getString("text");
         baseApp.printText(text, false);
     }
 }
