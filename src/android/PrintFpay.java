@@ -22,9 +22,21 @@ public class PrintFpay extends CordovaPlugin {
     }
 
 	public void printText(JSONArray args, CallbackContext callback) {
-        //BaseApp baseApp = (BaseApp) getApplication();
         BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
-        String text = args.getJSONObject(0).getString("text");
+        //String text = args.getJSONObject(0).getString("text");
+
+        if(args != null) {
+            try {
+                String text = String.parseString(args.getJSONObject(0).getString("text"));
+                callback.success("" + (text));
+                
+            } catch(Exception ex) {
+                callback.error("Someting went wrong " + ex);
+            }
+        } else {
+            callback.error("Please do not pass null value");
+        }
+
         
         
         //baseApp.printText(text, false);
