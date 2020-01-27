@@ -54,6 +54,6 @@ public class PrintFpay extends CordovaPlugin {
         }
 
         
-        //baseApp.printText(text, false);
+        baseApp.printText(text, false);
     }
 }
