@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 import android.app.Application;
 import ma.fpay.sunmilibrary.ionic.BaseApp;
-import ma.fpay.sunmilibrary.printerhelper.utils.AidlUtil;
+//import ma.fpay.sunmilibrary.printerhelper.utils.AidlUtil;
 
 public class PrintFpay extends CordovaPlugin {
     @Override
@@ -25,6 +25,6 @@ public class PrintFpay extends CordovaPlugin {
         //BaseApp baseApp = (BaseApp) getApplication();
         BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
 		String text = args.getJSONObject(0).getString("text");
-        baseApp.printText(text, false);
+        baseApp.printTexst(text, false);
     }
 }
