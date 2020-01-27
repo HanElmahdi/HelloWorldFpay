@@ -36,8 +36,8 @@ public class PrintFpay extends CordovaPlugin {
     }
 
 	public void printText(JSONArray args, CallbackContext callback) {
-        //BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
-        BaseApp baseApp = (BaseApp) this.cordova.getActivity();
+        BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
+        //BaseApp baseApp = (BaseApp) this.cordova.getActivity();
 
         //String text = args.getJSONObject(0).getString("text");
 
