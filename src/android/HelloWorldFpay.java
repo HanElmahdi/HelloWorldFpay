@@ -49,7 +49,7 @@ public class HelloWorldFpay extends CordovaPlugin {
         if(args != null) {
             try {
                 String text = args.getJSONObject(0).getString("text");
-                baseApp.printText(text, false);
+                //baseApp.printText(text, false);
                 callback.success("Text : " + (text));
             } catch(Exception ex) {
                 callback.error("printText : Someting went wrong " + ex);
@@ -63,7 +63,8 @@ public class HelloWorldFpay extends CordovaPlugin {
 
     private void test1(CallbackContext callback) {
         try {
-            callback.success("test 1 content");
+            Test t1 = new Test();
+            callback.success("hhh > " + t1.test());
         } catch(Exception ex) {
             callback.error("Someting went wrong " + ex);
         }
