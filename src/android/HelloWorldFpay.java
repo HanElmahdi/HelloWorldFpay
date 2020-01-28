@@ -33,6 +33,16 @@ public class HelloWorldFpay extends CordovaPlugin {
         return false;
     }
 
+    private void test1(CallbackContext callback) {
+        try {
+            Test t1 = new Test();
+            callback.success(t1.test());
+        } catch(Exception ex) {
+            callback.error("Someting went wrong " + ex);
+        }
+    }
+
+
     private void test(CallbackContext callback) {
         try {
             Test t1 = new Test();
@@ -59,15 +69,6 @@ public class HelloWorldFpay extends CordovaPlugin {
         }
 
         
-    }
-
-    private void test1(CallbackContext callback) {
-        try {
-            Test t1 = new Test();
-            callback.success("hhh > " + t1.test());
-        } catch(Exception ex) {
-            callback.error("Someting went wrong " + ex);
-        }
     }
 
     private void add(JSONArray args, CallbackContext callback) {
