@@ -23,7 +23,7 @@ public class PrintFpay extends CordovaPlugin {
 
     private void test1(CallbackContext callback) {
         try {
-            callback.success('test 1 content');
+            callback.success("test 1 content");
         } catch(Exception ex) {
             callback.error("Someting went wrong " + ex);
         }
