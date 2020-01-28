@@ -21,6 +21,14 @@ public class PrintFpay extends CordovaPlugin {
         return false;
     }
 
+    private void test1(CallbackContext callback) {
+        try {
+            callback.success('test 1 content');
+        } catch(Exception ex) {
+            callback.error("Someting went wrong " + ex);
+        }
+    }
+
 	public void printText(JSONArray args, CallbackContext callback) {
         BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
         //BaseApp baseApp = (BaseApp) this.cordova.getActivity();
