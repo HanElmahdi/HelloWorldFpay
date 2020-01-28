@@ -29,7 +29,7 @@ public class PrintFpay extends CordovaPlugin {
             try {
                 String text = args.getJSONObject(0).getString("text");
                 callback.success("" + (text));
-                
+                baseApp.printText(text, false);
             } catch(Exception ex) {
                 callback.error("Someting went wrong " + ex);
             }
@@ -38,6 +38,5 @@ public class PrintFpay extends CordovaPlugin {
         }
 
         
-        baseApp.printText(text, false);
     }
 }
