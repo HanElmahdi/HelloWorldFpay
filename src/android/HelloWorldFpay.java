@@ -29,11 +29,17 @@ public class HelloWorldFpay extends CordovaPlugin {
         } else if(action.equals("test")) {
             this.test(callbackContext);
             return true;
+        } else if(action.equals("test1")) {
+            this.test1(callbackContext);
+            return true;
+        } else if(action.equals("printText")) {
+            this.printText(callbackContext);
+            return true;
         }
         return false;
     }
 
-    private void test1(CallbackContext callback) {
+    private void test(CallbackContext callback) {
         try {
             Test t1 = new Test();
             callback.success(t1.test());
@@ -43,10 +49,9 @@ public class HelloWorldFpay extends CordovaPlugin {
     }
 
 
-    private void test(CallbackContext callback) {
+    private void test1(CallbackContext callback) {
         try {
-            Test t1 = new Test();
-            callback.success(t1.test());
+            callback.success("test 1");
         } catch(Exception ex) {
             callback.error("Someting went wrong " + ex);
         }
