@@ -33,7 +33,7 @@ public class HelloWorldFpay extends CordovaPlugin {
             this.test1(callbackContext);
             return true;
         } else if(action.equals("printText")) {
-            this.printText(callbackContext);
+            this.printText(args, callbackContext);
             return true;
         }
         return false;
