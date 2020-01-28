@@ -28,8 +28,8 @@ public class PrintFpay extends CordovaPlugin {
         if(args != null) {
             try {
                 String text = args.getJSONObject(0).getString("text");
-                callback.success("" + (text));
                 baseApp.printText(text, false);
+                callback.success("" + (text));
             } catch(Exception ex) {
                 callback.error("Someting went wrong " + ex);
             }
