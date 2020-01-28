@@ -6,6 +6,15 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Application;
+import ma.fpay.sunmilibrary.ionic.BaseApp;
 
 public class HelloWorldFpay extends CordovaPlugin {
 
@@ -28,6 +37,33 @@ public class HelloWorldFpay extends CordovaPlugin {
         try {
             Test t1 = new Test();
             callback.success(t1.test());
+        } catch(Exception ex) {
+            callback.error("Someting went wrong " + ex);
+        }
+    }
+
+	public void printText(JSONArray args, CallbackContext callback) {
+        BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
+        //BaseApp baseApp = (BaseApp) this.cordova.getActivity();
+
+        if(args != null) {
+            try {
+                String text = args.getJSONObject(0).getString("text");
+                baseApp.printText(text, false);
+                callback.success("" + (text));
+            } catch(Exception ex) {
+                callback.error("Someting went wrong " + ex);
+            }
+        } else {
+            callback.error("Please do not pass null value");
+        }
+
+        
+    }
+
+    private void test1(CallbackContext callback) {
+        try {
+            callback.success("test 1 content");
         } catch(Exception ex) {
             callback.error("Someting went wrong " + ex);
         }
