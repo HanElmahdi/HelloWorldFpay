@@ -71,9 +71,7 @@ public class HelloWorldFpay extends CordovaPlugin {
             }
         } else {
             callback.error("printText : Please do not pass null value");
-        }
-
-        
+        }        
     }
 
     private void add(JSONArray args, CallbackContext callback) {
