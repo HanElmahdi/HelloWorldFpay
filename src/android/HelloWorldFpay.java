@@ -6,6 +6,15 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Application;
+import ma.fpay.sunmilibrary.ionic.BaseApp;
 
 public class HelloWorldFpay extends CordovaPlugin {
 
@@ -20,6 +29,12 @@ public class HelloWorldFpay extends CordovaPlugin {
         } else if(action.equals("test")) {
             this.test(callbackContext);
             return true;
+        } else if(action.equals("test1")) {
+            this.test1(callbackContext);
+            return true;
+        } else if(action.equals("printText")) {
+            this.printText(args, callbackContext);
+            return true;
         }
         return false;
     }
@@ -31,6 +46,32 @@ public class HelloWorldFpay extends CordovaPlugin {
         } catch(Exception ex) {
             callback.error("Someting went wrong " + ex);
         }
+    }
+
+
+    private void test1(CallbackContext callback) {
+        try {
+            callback.success("test 1");
+        } catch(Exception ex) {
+            callback.error("Someting went wrong " + ex);
+        }
+    }
+
+	public void printText(JSONArray args, CallbackContext callback) {
+        BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
+        //BaseApp baseApp = (BaseApp) this.cordova.getActivity();
+
+        if(args != null) {
+            try {
+                String text = args.getJSONObject(0).getString("text");
+                baseApp.printText(text, false);
+                callback.success("Text : " + (text));
+            } catch(Exception ex) {
+                callback.error("printText : Someting went wrong " + ex);
+            }
+        } else {
+            callback.error("printText : Please do not pass null value");
+        }        
     }
 
     private void add(JSONArray args, CallbackContext callback) {
