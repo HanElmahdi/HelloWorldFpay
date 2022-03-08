@@ -60,19 +60,22 @@ public class HelloWorldFpay extends CordovaPlugin {
 	public void printText(JSONArray args, CallbackContext callback) {
         BaseApp baseApp = (BaseApp) this.cordova.getActivity().getApplicationContext();
         //BaseApp baseApp = (BaseApp) this.cordova.getActivity();
-
+        System.out.printf("BEGIN Printing Text");
         if(args != null) {
             try {
                 String text = args.getJSONObject(0).getString("text");
                 baseApp.printText(text, false);
+                System.out.printf("Text : " + (text));
                 callback.success("Text : " + (text));
             } catch(Exception ex) {
+                System.out.printf("printText : Someting went wrong " + ex);
                 callback.error("printText : Someting went wrong " + ex);
             }
         } else {
+            System.out.printf("printText : Please do not pass null value");
             callback.error("printText : Please do not pass null value");
         }
-
+        System.out.printf("END Printing Text");
         
     }
 
